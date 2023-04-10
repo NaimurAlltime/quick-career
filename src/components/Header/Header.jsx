@@ -8,16 +8,16 @@ const Header = () => {
         <Link to="/">QuickCareer</Link>
       </h5>
       <ul className="flex flex-col md:flex-row">
-        <Link className="pr-16" to="/">
+        <Link className="pr-12" to="/">
           Home
         </Link>
-        <Link className="pr-16" to="/statistics">
+        <Link className="pr-12" to="/statistics">
           Statistics
         </Link>
-        <Link className="pr-16" to="/applied_jobs">
+        <Link className="pr-12" to="/applied_jobs">
           Applied Jobs
         </Link>
-        <Link className="pr-16" to="/blog">
+        <Link className="pr-12" to="/blog">
           Blog
         </Link>
       </ul>
