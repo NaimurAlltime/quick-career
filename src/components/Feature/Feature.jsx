@@ -1,5 +1,5 @@
-import { faDollar, faLocationDot } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import FmdGoodOutlinedIcon from "@mui/icons-material/FmdGoodOutlined";
+import MonetizationOnOutlinedIcon from "@mui/icons-material/MonetizationOnOutlined";
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -22,10 +22,11 @@ const Feature = ({ feature }) => {
       </div>
       <div className="flex text-xl text-gray-600 font-medium mt-2">
         <p className="mr-4">
-          <FontAwesomeIcon icon={faLocationDot} /> {location}
+          <FmdGoodOutlinedIcon></FmdGoodOutlinedIcon> {location}
         </p>
         <p>
-          <FontAwesomeIcon icon={faDollar} /> Salary: {salary}
+          <MonetizationOnOutlinedIcon></MonetizationOnOutlinedIcon> Salary:
+          {salary}
         </p>
       </div>
       <Link to={`/job/${id}`}>

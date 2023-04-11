@@ -1,12 +1,20 @@
-import React from "react";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useParams } from "react-router-dom";
+import JobInfo from "../JobInfo/JobInfo";
 
 const JobDetails = () => {
-  const jobs = useLoaderData();
-  console.log(jobs);
+  const jobsData = useLoaderData();
+  // console.log(jobsData);
+  const { id } = useParams();
+  // console.log(id);
+  const findData = jobsData.filter((jd) => jd.id === id);
+  // console.log(findData);
   return (
-    <div>
-      <h2>JobDetails page</h2>
+    <div className="mt-24 md:mx-20">
+      <div>
+        {findData.map((job) => (
+          <JobInfo key={job.id} job={job}></JobInfo>
+        ))}
+      </div>
     </div>
   );
 };
