@@ -7,7 +7,7 @@ const Features = () => {
   useEffect(() => {
     fetch("featuresJob.json")
       .then((res) => res.json())
-      .then((data) => setFeatures(data));
+      .then((data) => setFeatures(data.slice(0, 4)));
   }, []);
 
   return (
@@ -17,10 +17,15 @@ const Features = () => {
         Explore thousands of job opportunities with all the information you
         need. Its your future
       </p>
-      <div className="md:grid grid-cols-2 gap-16">
+      <div className="md:grid grid-cols-2 gap-8 mt-7">
         {features.map((feature) => (
           <Feature key={feature.id} feature={feature}></Feature>
         ))}
+      </div>
+      <div className="text-center">
+        <button className="bg-indigo-500 mt-4 px-5 py-3 rounded-md text-lg text-white">
+          See All Jobs
+        </button>
       </div>
     </div>
   );
