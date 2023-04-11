@@ -5,23 +5,25 @@ const Header = () => {
   return (
     <nav className="md:flex justify-around items-center mt-7">
       <h5 className="text-3xl font-semibold">
-        <Link to="/">QuickCareer</Link>
+        <Link to="/">
+          <span className="text-indigo-500">Quick</span>Career
+        </Link>
       </h5>
       <ul className="flex flex-col md:flex-row">
-        <Link className="pr-12" to="/">
+        <Link className="pr-12 hover:text-indigo-400" to="/">
           Home
         </Link>
-        <Link className="pr-12" to="/statistics">
+        <Link className="pr-12 hover:text-indigo-400" to="/statistics">
           Statistics
         </Link>
-        <Link className="pr-12" to="/applied_jobs">
+        <Link className="pr-12 hover:text-indigo-400" to="/applied_jobs">
           Applied Jobs
         </Link>
-        <Link className="pr-12" to="/blog">
+        <Link className="pr-12 hover:text-indigo-400" to="/blog">
           Blog
         </Link>
       </ul>
-      <button className="bg-indigo-500 px-4 py-2 rounded-md text-lg text-white">
+      <button className="bg-indigo-500 px-4 py-2 rounded-md text-lg text-white hover:text-indigo-100">
         Star Applying
       </button>
     </nav>
