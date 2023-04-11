@@ -1,10 +1,11 @@
 import { faDollar, faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Feature = ({ feature }) => {
   //   console.log(feature);
-  const { logo, title, company, workPlace, location, jobType, salary } =
+  const { id, logo, title, company, workPlace, location, jobType, salary } =
     feature;
   return (
     <div className="pb-4">
@@ -27,9 +28,11 @@ const Feature = ({ feature }) => {
           <FontAwesomeIcon icon={faDollar} /> Salary: {salary}
         </p>
       </div>
-      <button className="bg-indigo-500 mt-4 px-4 py-2 rounded-md text-lg text-white">
-        View Details
-      </button>
+      <Link to={`/job/${id}`}>
+        <button className="bg-indigo-500 mt-4 px-4 py-2 rounded-md text-lg text-white">
+          View Details
+        </button>
+      </Link>
     </div>
   );
 };
