@@ -5,28 +5,39 @@ import PhoneOutlinedIcon from "@mui/icons-material/PhoneOutlined";
 import SubtitlesOutlinedIcon from "@mui/icons-material/SubtitlesOutlined";
 import React from "react";
 
-const JobInfo = ({ job }) => {
+const JobInfo = ({ job, handleApplyJob }) => {
   //   console.log(job);
+  const {
+    id,
+    title,
+    salary,
+    description,
+    responsibility,
+    requirements,
+    experiences,
+    location,
+    contact,
+  } = job;
   return (
     <div className="md:grid grid-cols-3 gap-6">
       <div className="col-span-2">
         <p className="leading-loose">
           <span className="font-semibold">Job Description: </span>
-          <span className="text-gray-600">{job.description}</span>
+          <span className="text-gray-600">{description}</span>
         </p>
         <p className="leading-loose mt-5">
           <span className="font-semibold">Job Description: </span>
-          <span className="text-gray-600">{job.responsibility}</span>
+          <span className="text-gray-600">{responsibility}</span>
         </p>
         <p className="leading-loose mt-5">
           <span className="font-medium">Educational Requirements: </span>
           <br />
-          {job.requirements}
+          {requirements}
         </p>
         <p className="leading-loose mt-5">
           <span className="font-semibold">Experiences: </span>
           <br />
-          <span className="text-gray-600">{job.experiences}</span>
+          <span className="text-gray-600">{experiences}</span>
         </p>
       </div>
       <div>
@@ -36,15 +47,13 @@ const JobInfo = ({ job }) => {
           <MonetizationOnOutlinedIcon className="text-indigo-500"></MonetizationOnOutlinedIcon>
           <span className="font-bold text-lg text-gray-600 ml-2">
             Salary :
-            <span className="text-gray-400  ml-2">
-              {job.salary} (Per Month)
-            </span>
+            <span className="text-gray-400  ml-2">{salary} (Per Month)</span>
           </span>
         </p>
         <p className="mt-4">
           <SubtitlesOutlinedIcon className="text-indigo-500"></SubtitlesOutlinedIcon>
           <span className="font-bold text-lg text-gray-600  ml-2">
-            Job Title :<span className="text-gray-400  ml-2">{job.title}</span>
+            Job Title :<span className="text-gray-400  ml-2">{title}</span>
           </span>
         </p>
         <h4 className="mt-7 text-lg font-medium">Contact Information</h4>
@@ -52,24 +61,25 @@ const JobInfo = ({ job }) => {
         <p>
           <PhoneOutlinedIcon className="text-indigo-500"></PhoneOutlinedIcon>
           <span className="font-bold text-lg text-gray-600 ml-2">
-            Phone :
-            <span className="text-gray-400  ml-2">{job.contact.phone}</span>
+            Phone :<span className="text-gray-400  ml-2">{contact.phone}</span>
           </span>
         </p>
         <p className="mt-4">
           <EmailOutlinedIcon className="text-indigo-500"></EmailOutlinedIcon>
           <span className="font-bold text-lg text-gray-600 ml-2">
-            Email :
-            <span className="text-gray-400  ml-2">{job.contact.email}</span>
+            Email :<span className="text-gray-400  ml-2">{contact.email}</span>
           </span>
         </p>
         <p className="mt-4">
           <FmdGoodOutlinedIcon className="text-indigo-500"></FmdGoodOutlinedIcon>
           <span className="font-bold text-lg text-gray-600  ml-2">
-            Address :<span className="text-gray-400  ml-2">{job.location}</span>
+            Address :<span className="text-gray-400  ml-2">{location}</span>
           </span>
         </p>
-        <button className="bg-indigo-500 w-full px-4 py-4 mt-8 font-medium rounded-md text-xl text-white hover:text-indigo-100">
+        <button
+          onClick={() => handleApplyJob(id)}
+          className="bg-indigo-500 w-full px-4 py-4 mt-8 font-medium rounded-md text-xl text-white hover:text-indigo-100"
+        >
           Apply Now
         </button>
       </div>
