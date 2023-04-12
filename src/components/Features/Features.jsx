@@ -3,12 +3,16 @@ import Feature from "./../Feature/Feature";
 
 const Features = () => {
   const [features, setFeatures] = useState([]);
-
+  const [showAll, setShowAll] = useState(false);
   useEffect(() => {
     fetch("featuresJob.json")
       .then((res) => res.json())
-      .then((data) => setFeatures(data.slice(0, 4)));
+      .then((data) => setFeatures(data));
   }, []);
+
+  const handleClick = () => {
+    setShowAll(true);
+  };
 
   return (
     <div className="mt-24 md:mx-20">
@@ -17,13 +21,21 @@ const Features = () => {
         Explore thousands of job opportunities with all the information you
         need. Its your future
       </p>
+
       <div className="md:grid grid-cols-2 gap-8 mt-7">
-        {features.map((feature) => (
-          <Feature key={feature.id} feature={feature}></Feature>
-        ))}
+        {showAll
+          ? features.map((feature) => (
+              <Feature key={feature.id} feature={feature} />
+            ))
+          : features
+              .slice(0, 4)
+              .map((feature) => <Feature key={feature.id} feature={feature} />)}
       </div>
       <div className="text-center">
-        <button className="bg-indigo-500 mt-4 px-5 py-3 rounded-md text-lg text-white">
+        <button
+          onClick={handleClick}
+          className="bg-indigo-500 mt-4 px-5 py-3 rounded-md text-lg text-white"
+        >
           See All Jobs
         </button>
       </div>

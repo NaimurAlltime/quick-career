@@ -6,9 +6,7 @@ const JobDetails = () => {
   const jobsData = useLoaderData();
   // console.log(jobsData);
   const { id } = useParams();
-  // console.log(id);
   const findData = jobsData.filter((jd) => jd.id === id);
-  // console.log(findData);
 
   // apply job button handler
   const handleApplyJob = (id) => {
