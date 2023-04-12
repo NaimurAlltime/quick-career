@@ -1,6 +1,6 @@
 # Quick Career
 
-## Live Site:
+## Live Site: https://beautiful-tartufo-243082.netlify.app/
 
 ### My project name Quick Career. Simple description in my project:
 
