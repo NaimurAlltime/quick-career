@@ -78,7 +78,7 @@ const JobInfo = ({ job, handleApplyJob }) => {
         </p>
         <button
           onClick={() => handleApplyJob(id)}
-          className="bg-indigo-500 w-full px-4 py-4 mt-8 font-medium rounded-md text-xl text-white hover:text-indigo-100"
+          className="bg-indigo-500 w-full px-4 py-4 mt-8 font-medium rounded-md text-xl text-white hover:bg-indigo-600"
         >
           Apply Now
         </button>

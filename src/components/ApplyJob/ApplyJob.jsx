@@ -39,7 +39,7 @@ const ApplyJob = ({ applyJob }) => {
         </div>
         <div className="absolute md:right-64">
           <Link to={`/job/${id}`}>
-            <button className="bg-indigo-500 mt-4 px-4 py-2 rounded-md text-lg text-white">
+            <button className="bg-indigo-500 hover:bg-indigo-600 mt-4 px-4 py-2 rounded-md text-lg text-white">
               View Details
             </button>
           </Link>

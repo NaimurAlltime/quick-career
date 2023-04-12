@@ -23,7 +23,7 @@ const Header = () => {
           Blog
         </Link>
       </ul>
-      <button className="bg-indigo-500 px-4 py-2 rounded-md text-lg text-white hover:text-indigo-100">
+      <button className="bg-indigo-500 px-4 py-2 rounded-md text-lg text-white hover:bg-indigo-600">
         Star Applying
       </button>
     </nav>

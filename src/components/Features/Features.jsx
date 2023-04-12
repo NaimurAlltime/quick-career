@@ -18,8 +18,9 @@ const Features = () => {
     <div className="mt-24 md:mx-20">
       <h2 className="text-4xl font-semibold text-center">Featured Jobs</h2>
       <p className="text-center mt-5">
-        Explore thousands of job opportunities with all the information you
-        need. Its your future
+        Employers tend to shudder at the spam on big job sites. That makes list
+        a nice homespun option to post jobs. It's kind of like the old time
+        print classifieds.
       </p>
 
       <div className="md:grid grid-cols-2 gap-8 mt-7">
@@ -34,7 +35,7 @@ const Features = () => {
       <div className="text-center">
         <button
           onClick={handleClick}
-          className="bg-indigo-500 mt-4 px-5 py-3 rounded-md text-lg text-white"
+          className="bg-indigo-500 mt-4 px-5 py-3 hover:bg-indigo-600 rounded-md text-lg text-white"
         >
           See All Jobs
         </button>

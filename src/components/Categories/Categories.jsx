@@ -14,8 +14,8 @@ const Categories = () => {
     <div className="mt-20 md:ml-20">
       <h2 className="text-4xl font-semibold text-center">Job Category List</h2>
       <p className="text-center mt-5">
-        Explore thousands of job opportunities with all the information you
-        need. Its your future
+        once you know how to use the best job search engines, you'll skate
+        through to the finish line of interviews and land your dream job fast.
       </p>
       <div className="md:grid grid-cols-4 gap-8">
         {categories.map((category, idx) => (

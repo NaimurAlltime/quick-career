@@ -11,14 +11,14 @@ const Banner = () => {
           <br />
           <span className="text-indigo-500">Dream Job</span>
         </h6>
-        <p className="mt-8">
-          Explore thousands of job opportunities with all the
+        <p className="mt-8 leading-loose">
+          Every opening on this great job site is verified
           <br />
-          information you need. Its your future. Come find it. Manage all
+          accurate by actual human beings. Tools like automated
           <br />
-          your job application from start to finish.
+          job search make the process fast and easy.
         </p>
-        <button className="bg-indigo-500 mt-4 px-4 py-2 rounded-md text-lg text-white">
+        <button className="bg-indigo-500 mt-4 px-4 py-2 rounded-md text-lg hover:bg-indigo-600 text-white">
           Get Started
         </button>
       </div>
