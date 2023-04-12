@@ -11,7 +11,7 @@ const Features = () => {
   }, []);
 
   return (
-    <div className="mt-24 md:ml-20">
+    <div className="mt-24 md:mx-20">
       <h2 className="text-4xl font-semibold text-center">Featured Jobs</h2>
       <p className="text-center mt-5">
         Explore thousands of job opportunities with all the information you
